@@ -9,7 +9,8 @@ chinese_score = numpy.array([65, 90, 82, 72, 66, 77])
 #
 # #1.有多少學生英文成績比數學成績高?
 compare = numpy.greater(english_score, math_score)
-ans1 = list(compare).count(False)
+# ans1 = list(compare).count(False)
+ans1 = numpy.sum(compare)
 print(ans1)
 # #2.是否全班同學最高分都是國文?
 highest = numpy.logical_and(chinese_score > english_score, chinese_score > math_score)
